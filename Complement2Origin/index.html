@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>原码 &harr; 补码转换工具</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>原码 &harr; 补码转换工具</h1>
+  <!-- 错误提示 -->
+  <div class="error" id="errorMsg"></div>
+  <!-- 原码、位宽、补码一排 -->
+  <div class="form-row">
+    <div class="form-col Sign-Magnitude">
+      <label for="original">原码 (dec/hex):</label>
+      <input type="text" id="original" placeholder="例如: -5 或 0x1A"/>
+    </div>
+    <div class="form-col Bit-width">
+      <label for="bits">数据位宽:</label>
+      <select id="bits" style="font-size:1rem; padding: 0.5rem;">
+        <option value="8">8 &nbsp;&nbsp;bits</option>
+        <option value="16">16 bits</option>
+        <option value="32">32 bits</option>
+        <option value="64">64 bits</option>
+      </select>
+    </div>
+    <div class="form-col Twos-Complement">
+      <label for="complement">补码 (dec/hex):</label>
+      <input type="text" id="complement" placeholder="例如: 129 或 0xA1"/>
+    </div>
+  </div>
+
+  <!-- 按钮区域 -->
+  <div class="button-row">
+    <button class="convert-btn" onclick="convert()">转换</button>
+    <button class="clear-btn" onclick="clearFields()">清0</button>
+  </div>
+
+  <div class="note"> 
+    <b>使用方法：</b>
+    <ol>
+      <li>原码与补码仅支持10进制与16进制的有符号数</li>
+      <li>原码框作为输入时，表示：原码&rarr;补码，补码以16进制显示(标红)</li>
+      <li>补码框作为输入时，表示：补码&rarr;原码，原码以10进制显示(标红)</li>
+    </ol>
+  </div>
+</div>
+
+<script src="complement2origin.js" type="text/javascript"></script>
+
+</body>
+</html>
