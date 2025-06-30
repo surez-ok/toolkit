@@ -9,8 +9,11 @@
 
 <div class="container">
   <h1>原码 &harr; 补码转换工具</h1>
+  <!-- 帮助按钮 -->
+  <a href="helpModule.html" target="_blank" class="help-button">?</a>
   <!-- 错误提示 -->
   <div class="error" id="errorMsg"></div>
+
   <!-- 原码、位宽、补码一排 -->
   <div class="form-row">
     <div class="form-col Sign-Magnitude">
@@ -36,16 +39,6 @@
   <div class="button-row">
     <button class="convert-btn" onclick="convert()">转换</button>
     <button class="clear-btn" onclick="clearFields()">清0</button>
-  </div>
-
-  <div class="note"> 
-    <b>使用方法：</b>
-    <ol>
-      <li>原码与补码仅支持10进制与16进制</li>
-      <li>原码框作为输入时，表示：原码&rarr;补码，补码以16进制显示(标红)</li>
-      <li>补码框作为输入时，表示：补码&rarr;原码，原码以10进制显示(标红)</li>
-    </ol>
-    参考：<a href="https://www.cnblogs.com/sureZ-learning/p/18942623">计算机体系结构01之原码与补码</a>
   </div>
 </div>
 

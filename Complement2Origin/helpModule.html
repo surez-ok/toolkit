@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <title>原码 &harr; 补码转换工具帮助</title>
+  <link rel="stylesheet" type="text/css" href="helpModule_styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>使用方法：</h2>
+    <ol>
+      <li>原码与补码仅支持10进制与16进制</li>
+      <li>原码框作为输入时，表示：原码&rarr;补码，补码以16进制显示(标红)</li>
+      <li>补码框作为输入时，表示：补码&rarr;原码，原码以10进制显示(标红)</li>
+    </ol>
+    参考：<a href="https://www.cnblogs.com/sureZ-learning/p/18942623">计算机体系结构01之原码与补码</a>
+  
+    <h2>使用举例(以8bit数为例)：</h2>
+    <p>例1：原码为+5 或 5 （10进制数），求补码？
+        <img src=images/eg1.png alt="eg1.png">
+    </p>
+    <p>例2：原码为-5 （10进制数），求补码？
+        <img src=images/eg2.png alt="eg2.png">
+    </p>
+    <p>例3：原码为0xF （16进制数，最高位为符号位为0），即10进制的15，求补码？
+        <img src=images/eg3.png alt="eg3.png">
+    </p>
+    <p>例4: 原码为0xFF （16进制数，最高位为符号位为1），即10进制的-127，求补码
+        <img src=images/eg4.png alt="eg4.png">
+    </p>
+    <p>例5: 补码为0x81 (16进制数)，求原码？结果为-127，与例4可以进行相互验证
+        <img src=images/eg5.png alt="eg5.png">
+    </p>
+    <p>例6: 补码为129 (10进制数)，即16进制的0x81，求原码？结果为-127
+        <img src=images/eg6.png alt="eg6.png">
+    </p>
+  </div>
+
+</body>
+</html>

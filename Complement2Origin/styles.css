@@ -10,6 +10,7 @@
     }
 
     .container {
+      position: relative;
       background: white;
       padding: 2rem;
       border-radius: 20px;
@@ -30,13 +31,13 @@
     .form-row {
       display: flex;
       gap: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 3rem;
     }
     .form-col {
       flex: 1;
       display: flex;
       flex-direction: column;
-	    align-items: center;
+      align-items: center;
     }
     .Sign-Magnitude {
       flex: 4 1 auto;
@@ -71,7 +72,7 @@
       gap: 1rem;
     }
 
-    button {
+    .convert-btn {
       padding: 0.6rem 1.5rem;
       font-size: 1rem;
       font-weight: bold;
@@ -79,15 +80,19 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-    }
-
-    .convert-btn {
       background-color: #007aff;
       color: white;
       font-size: 1.2rem;
     }
 
     .clear-btn {
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
       background-color: #ff3b30;
       color: white;
       font-size: 1.2rem;
@@ -100,10 +105,25 @@
     .clear-btn:hover {
       background-color: #cc2e26;
     }
-    .note {
-      margin-top: 1rem;
-      font-size: 0.9rem;
+
+    .help-button {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align:center;
+      text-decoration:none;
+      transition: background-color 0.3s ease;
     }
-    .note li {
-      line-height: 2em;
+
+    .help-button:hover {
+      background-color: #005edc;
     }

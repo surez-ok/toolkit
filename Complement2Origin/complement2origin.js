@@ -50,15 +50,16 @@ function toTwosComplement(value, bits) {
   const numBigInt = BigInt(num);
   const bitsBigInt = BigInt(bits);
 
-  const maxVal = 1n << bitsBigInt;
+  const mod = 1n << bitsBigInt;
+  const maxVal = (1n << (bitsBigInt - 1n)) - 1n;
   const minVal = -(1n << (bitsBigInt - 1n));
 
-  if (numBigInt < minVal || numBigInt >= (maxVal - 1n)) {
-    throw new Error(`超出${bits}位补码范围：${minVal} ~ ${maxVal - 1n}`);
+  if (numBigInt < minVal || numBigInt > maxVal) {
+    throw new Error(`超出${bits}位补码范围：${minVal} ~ ${maxVal}`);
   }
 
   // 计算补码二进制字符串
-  const binStr = ((numBigInt + maxVal) % maxVal).toString(2).padStart(Number(bitsBigInt), '0');
+  const binStr = ((numBigInt + mod) % mod).toString(2).padStart(Number(bitsBigInt), '0');
 
   // 转为十六进制并补零到4位对齐
   const hexStr = BigInt("0b" + binStr).toString(16).toUpperCase().padStart(Math.ceil(bits / 4), '0');
